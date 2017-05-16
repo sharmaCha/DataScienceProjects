@@ -1,1 +1,15 @@
 
+Connecting to the Facebook API via App:
+
+First we have to create an App on the Facebook platform. We will use this app to connect to the Facebook API. 
+This way you can manage your connections very good but it also has some disadvantages. 
+Different than in version 1 of the API you can now just get information of the friends who are also using the app. 
+This creates big problems as you can´t create a friend network with all you friends anymore.
+
+To create a new app go to https://developers.facebook.com
+
+Click on “Apps” and choose “Add a New App“. In the next window choose “Website” and give your app a fancy name.
+
+Apply the changes with “Create App ID“.
+
+Then using the API ID and token, we do Data Mining of our Profile in R.
