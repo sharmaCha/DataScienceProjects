@@ -2,7 +2,7 @@ install.packages("Rfacebook")
 install.packages("RCurl")
 library(Rfacebook)
 library(RCurl)
-fb_oauth <- fbOAuth(app_id="891590240978849", app_secret="8b853b788e93064eec67afc545ee50f6",extended_permissions = TRUE)
+fb_oauth <- fbOAuth(app_id="000000000000", app_secret="1111111111111111111111111",extended_permissions = TRUE)
 me <- getUsers("me",token=fb_oauth, private_info=TRUE)
 # got error so ran the below code
 fbOAuth <- function(app_id, app_secret, extended_permissions=FALSE, legacy_permissions=FALSE, scope=NULL)
@@ -86,7 +86,7 @@ fbOAuth <- function(app_id, app_secret, extended_permissions=FALSE, legacy_permi
   return(fb_oauth)
 }
 
-fb_oauth <- fbOAuth(app_id="891590240978849", app_secret="8b853b788e93064eec67afc545ee50f6",extended_permissions = TRUE)
+fb_oauth <- fbOAuth(app_id="000000000000000", app_secret="11111111111111",extended_permissions = TRUE)
 
 # To see user profile name
 
