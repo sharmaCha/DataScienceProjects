@@ -185,7 +185,7 @@ str(result)
 #   A tree of cognitive and social characteristics in JSON or CSV format
 
 
-PERSONALITY_USERNAME_PASSWORD = "bdd46d87-6b57-4fef-9cdb-b160c3034f2e:arHnNADcz5rC"
+PERSONALITY_USERNAME_PASSWORD = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 text <- paste(replicate(1000, rmsfact::rmsfact()), collapse = ' ') #Ten Richard Stallman Facts used for Personality Insights.
 #text <- c("Chandni is working hard to do the 
           #best she can and she is very serious for her goals") 
@@ -259,7 +259,7 @@ str(result)
 # And the service will output:
 #   JSON that provides a hierarchical representation of the analysis of the terms in the input message
 
-TONE_USERNAME_PASSWORD="6d495037-b07e-4cb8-bc4b-ff9eb1d021de:gAM0BP1yGQsB"
+TONE_USERNAME_PASSWORD="YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYyy"
 text <- c("Boston, It is so cold and Awesome!")
 result <- text_tone(text, TONE_USERNAME_PASSWORD)
 str(result)
@@ -327,7 +327,7 @@ str(result)
 # 
 # And the service will output:
 #   Text transcriptions of the audio with recognized words
-SPEECH_TO_TEXT_USERNAME_PASSWORD="4b7dab15-ca73-43e7-80dc-5c72905ee135:QDGtQpX5epCi"
+SPEECH_TO_TEXT_USERNAME_PASSWORD="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 audio_path <- system.file("extdata/audio", package = "cognizer")
 audios <- list.files(audio_path, full.names = TRUE)
 audio_transcript <- audio_text(audios, SPEECH_TO_TEXT_USERNAME_PASSWORD)
@@ -371,9 +371,9 @@ library(rjson)
 
 url_CONV="https://gateway.watsonplatform.net/conversation/api"
 version="?version=2016-07-11"
-username_CONV="0f74cc05-cd18-4bb3-8be4-b824a44ca4be" # check we got it from KEYs.R file in same directory - looks like this - "e63f524d-9999-9999-9999-e6b1d4e99b87"
-password_CONV="X4vzahtoAXbz" # check we got it from KEYs.R file in same directory - looks like this - "ABCD0EggCXYZ"
-workspace_CONV="e843d2e9-5523-45ea-84f6-97e41741b5d3" # check we got it from KEYs.R file - looks like this - "2ded4293-9999-9999-9999-4c8b1289be81" <- **** YOU NEED TO PULL THIS FROM BROWSER URL WHEN YOU TEST CONVO IN TOOLING - I THINK ONLY PLACE TO GET RIGHT NO
+username_CONV="SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS" # check we got it from KEYs.R file in same directory - looks like this - "e63f524d-9999-9999-9999-e6b1d4e99b87"
+password_CONV="RRRRRRRRRRRRRRRR" # check we got it from KEYs.R file in same directory - looks like this - "ABCD0EggCXYZ"
+workspace_CONV="RRRRRRRRRRRRRRRRTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" # check we got it from KEYs.R file - looks like this - "2ded4293-9999-9999-9999-4c8b1289be81" <- **** YOU NEED TO PULL THIS FROM BROWSER URL WHEN YOU TEST CONVO IN TOOLING - I THINK ONLY PLACE TO GET RIGHT NO
 
 #getwd()
 
@@ -410,7 +410,7 @@ response <- POST(url=paste(url_CONV,"/workspaces/",workspace_CONV,"/message",ver
                  authenticate(username_CONV,password_CONV),
                  add_headers("Content-Type"="application/json"),
                  body = '{"input":{"text":"coffee"},
-                 "context":{"conversation_id":"1a598ffd-2b01-4330-923a-291a0cecc5f9",
+                 "context":{"conversation_id":"11111111111111111111111111111111111111111111111111111111111111111111111",
                  "system":{"dialog_stack":["node_6_1468893593485"],
                  "dialog_turn_counter":1,"dialog_request_counter":1}}}'
 )
@@ -430,7 +430,7 @@ response <- POST(url=paste(url_CONV,"/workspaces/",workspace_CONV,"/message",ver
                  authenticate(username_CONV,password_CONV),
                  add_headers("Content-Type"="application/json"),
                  body = '{"input":{"text":"coffee"},
-                 "context":{"conversation_id":"1a598ffd-2b01-4330-923a-291a0cecc5f9",
+                 "context":{"conversation_id":"22222222222222222222222222222222222222222222",
                  "system":{"dialog_stack":["node_12_1468894103975"],
                  "dialog_turn_counter":1,"dialog_request_counter":1}}}'
 )
@@ -451,7 +451,7 @@ response <- POST(url=paste(url_CONV,"/workspaces/",workspace_CONV,"/message",ver
                  authenticate(username_CONV,password_CONV),
                  add_headers("Content-Type"="application/json"),
                  body = '{"input":{"text":"coffee"},
-                 "context":{"conversation_id":"d8c4f16c-1165-4486-9f71-085e0578a587",
+                 "context":{"conversation_id":"333333333333333333333333333333333333333333333333333333333",
                  "system":{"dialog_stack":["node_6_1474949437344"],
                  "dialog_turn_counter":1,"dialog_request_counter":1}}}'
 )
