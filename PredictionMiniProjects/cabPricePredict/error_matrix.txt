@@ -1,0 +1,26 @@
+Validation Set Metrics: 
+=====================
+
+GBM
+RMSE: (Extract with `h2o.rmse`) 0.5082491
+
+5,1000,0.05
+RMSE: (Extract with `h2o.rmse`) 0.4940582
+
+RMSE: (Extract with `h2o.rmse`) 0.4941498
+
+5,2000 RMSE: 4940582
+5, 3000, .05 Missing values not treat: RMSE 0.4489018
+
+
+
+
+RF
+1000, 5 => RMSE: (Extract with `h2o.rmse`) 0.5302495
+500, 4 => rmse .53
+300,3 => RMSE .55
+
+
+DL
+RMSE: (Extract with `h2o.rmse`) 0.4971584; h=60, e=40
+RMSE: 0.4955619 h=80,e-50
