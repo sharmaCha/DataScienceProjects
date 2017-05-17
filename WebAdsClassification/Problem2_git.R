@@ -31,7 +31,7 @@ Xy_vl <- data.frame(lapply(Xy_vl, impute))
 Xy_vl$ad <- as.factor(Xy_vl$ad)
 
 #write to csv
-write.csv(Xy_vl, file="/Users/hpanjwani/Dropbox/ADS Team 7/Mid Term/Problem 2/ad.csv", row.names = F)
+write.csv(Xy_vl, file="/Mid Term/Problem 2/ad.csv", row.names = F)
 
 #View(summary(Xy_vl$ad))
 #sum((lr_preds == 0))
