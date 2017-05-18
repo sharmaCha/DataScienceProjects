@@ -156,7 +156,7 @@ str(image_text)
 # Language Translator models to specific use cases. The service includes 
 # a new Glossary-Based Customization function (currently available at no additional charge).
 
-LANGUAGE_USERNAME_PASSWORD = "39409e98-2b55-49bb-990c-ffeaca9a0009:KbNsDllXlHD0"
+LANGUAGE_USERNAME_PASSWORD = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 text <- c("Mirando hacia adelante a UseR2017 en Bruselas!")
 result <- text_translate(text, LANGUAGE_USERNAME_PASSWORD)
 str(result)
