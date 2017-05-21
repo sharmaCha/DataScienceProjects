@@ -1,0 +1,8 @@
+This project is for Image classification using Google's Open source Deep Learning (one of the recent Artificial Intelligence
+growing subset) Library Tensorflow.
+
+The images are pre-processed (flattened to 1 D, matrix of vectors created) and using Convolution Neural Networks, images of celebs 
+dataset are classified. The dataset is available in Google and easy to access.
+
+The project is focused to understand and explore Deep Networks model building.
+This project is under development.
