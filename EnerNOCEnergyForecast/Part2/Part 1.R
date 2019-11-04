@@ -1,5 +1,5 @@
 #Reading the Energy Dataset - newdata.csv
-energy <- read.csv("/Users/hpanjwani/R Workspace/Assignment 2/Problem Statement/NewData.csv")
+energy <- read.csv("/Users/NewData.csv")
 
 #Keeping the rows which has units in 'kWh' and discarding others
 kWHList <- sapply (energy$Units, function(x) x == 'kWh')
@@ -113,9 +113,9 @@ nonZeroKWHEnergy <- rbind(nonPeakNonZero, peakNonZero)
 #View(summary(zeroKWHEnergy))
 #View(summary(energy))
 
-write.csv(energy, file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/energy.csv")
-write.csv(zeroKWHEnergy, file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/zeroKWHEnergy.csv")
-write.csv(nonZeroKWHEnergy, file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/nonZeroKWHEnergy.csv")
+write.csv(energy, file="/Users/energy.csv")
+write.csv(zeroKWHEnergy, file="/Users/zeroKWHEnergy.csv")
+write.csv(nonZeroKWHEnergy, file="/Users/nonZeroKWHEnergy.csv")
 
 #Working on temperature dataset
 #install.packages("weatherData")
@@ -168,7 +168,7 @@ aggdata$Temp[vector] <- (((aggdata$Temp[vector[1]-1]) + (aggdata$Temp[vector[1]+
 #View(summary(aggdata))
 
 #write to csv file
-write.csv(aggdata, file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/Temperature.csv")
+write.csv(aggdata, file="/Users/Temperature.csv")
 
 # merging the dataset
 library(dplyr)
@@ -183,7 +183,7 @@ library(zoo)
 consolidate$Temp <- na.locf(consolidate$Temp)
 
 #Writing it to csv
-write.csv(consolidate, file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/Hourly_filled_data.csv")
+write.csv(consolidate, file="/Users/Hourly_filled_data.csv")
 
 #75% of the sample size
 smp_size <- floor(0.75 * nrow(consolidate))
@@ -213,7 +213,7 @@ accuracy(pred, test$kWh)
 #View(pred)
 
 #write prediction to the csv
-#write.csv(pred, file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/Prediction.csv")
+#write.csv(pred, file="/Users/Prediction.csv")
 
 #writing data to the csv files
 library(devtools)
@@ -224,11 +224,11 @@ tidy_lmfit[,1:2]
 account <- c("Account No", unique(energy$Account))
 tidy_lmfit <- rbind(account,(tidy_lmfit[,1:2]))
 tidy_lmfit[,1:2]
-write.csv(tidy_lmfit[,1:2], file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/RegressionOutputs.csv")
+write.csv(tidy_lmfit[,1:2], file="/Users/RegressionOutputs.csv")
 
 #install.packages("ROCR")
 library(ROCR)
 account <- c("Account No", unique(energy$Account))
 account <- setNames(as.data.frame(account[2]), c("Account"))
 performance <- t(cbind(account, accuracy(pred, test$kWh)))
-write.csv(performance, file="/Users/hpanjwani/R Workspace/Assignment 2/Output/Approach 1/PerformanceMetrics.csv")
+write.csv(performance, file="/Users/PerformanceMetrics.csv")
